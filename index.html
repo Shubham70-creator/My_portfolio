@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shubham Singh — Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Titlebar / Nav (looks like a code editor window) -->
+<header class="titlebar">
+  <div class="titlebar-left">
+    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+    <span class="titlebar-path">Portfolio</span>
+  </div>
+  <nav class="tabs" id="tabs">
+    <a href="#about" class="tab" data-tab="about.js">About</a>
+    <a href="#skills" class="tab" data-tab="skills.py">Skills</a>
+    <a href="#projects" class="tab" data-tab="projects.md">Projects</a>
+    <a href="#experience" class="tab" data-tab="log.txt">Experience</a>
+    <a href="#contact" class="tab" data-tab="contact.sh">Contact</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="gutter" aria-hidden="true">
+    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+  </div>
+  <div class="hero-content">
+    <p class="code-line"><span class="kw"></span> <span class="var">Developer</span> <span class="op">=</span> <span class="brace">{</span></p>
+    <p class="code-line indent"><span class="prop">Name</span><span class="op">:</span> <span class="str">"Shubham Singh"</span><span class="op">,</span></p>
+    <p class="code-line indent"><span class="prop">Role</span><span class="op">:</span> <span class="str">"<span class="typing" id="typingRole"></span></span><span class="cursor">|</span><span class="op">,</span></p>
+    <p class="code-line indent"><span class="prop">Based</span><span class="op">:</span> <span class="str">"Greater Noida, India"</span></p>
+    <p class="code-line"><span class="brace">}</span><span class="op">;</span></p>
+
+    <h1 class="hero-name">Shubham Singh</h1>
+    <p class="hero-sub">B.Tech CSE (AI &amp; ML) · GNIOT, Expected 2027 · CGPA 8.1</p>
+
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">View-Projects</a>
+      <a href="#contact" class="btn btn-ghost">Get-in-Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="section-head">
+    <span class="section-tag"></span>
+    <h2>Objective</h2>
+  </div>
+  <div class="about-grid">
+    <div class="comment-block">
+      <p><span class="cmt"></span></p>
+      <p><span class="cmt"> * Computer Science Engineering (AI &amp; ML) student with strong</span></p>
+      <p><span class="cmt">  analytical and problem-solving skills. Seeking to apply Core Java,</span></p>
+      <p><span class="cmt">  data structures, and logical reasoning in a fast-paced product</span></p>
+      <p><span class="cmt">  environment eager to learn, take ownership, and build scalable</span></p>
+      <p><span class="cmt">  software solutions.</span></p>
+      <p><span class="cmt"> </span></p>
+    </div>
+    <div class="education-card">
+      <h3><span class="mono-label">Education</span></h3>
+      <ul class="edu-list">
+        <li>
+          <div class="edu-row"><strong>B.Tech, Computer Science &amp; Engineering (AI &amp; ML)</strong><span class="tag-pill">CGPA 8.1</span></div>
+          <div class="edu-sub">Greater Noida Institute of Technology (GNIOT) · Expected 2027</div>
+        </li>
+        <li>
+          <div class="edu-row"><strong>Class 12 — Senior Secondary</strong><span class="tag-pill">80%</span></div>
+          <div class="edu-sub">2023</div>
+        </li>
+        <li>
+          <div class="edu-row"><strong>Class 10 — Secondary</strong><span class="tag-pill">81%</span></div>
+          <div class="edu-sub">2021</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <div class="section-head">
+    <span class="section-tag"></span>
+    <h2>Skills</h2>
+  </div>
+
+  <div class="skills-imports">
+    <p><span class="kw"></span> <span class="str">Programing Languages</span> <span class="kw"></span> <span class="var"></span></p>
+    <div class="pill-row">
+      <span class="pill blue">Java (OOP, Collections, Exceptions)</span>
+      <span class="pill amber">Python</span>
+      <span class="pill mint">C</span>
+      <span class="pill pink">C++</span>
+    </div>
+
+    <p><span class="kw"></span> <span class="str">Core_concepts</span> <span class="kw"></span> <span class="var"></span></p>
+    <div class="pill-row">
+      <span class="pill blue">Object-Oriented Programming</span>
+      <span class="pill amber">Data Structures</span>
+      <span class="pill mint">Problem Solving</span>
+    </div>
+
+    <p><span class="kw"></span> <span class="str">Tools</span> <span class="kw"></span> <span class="var"></span></p>
+    <div class="pill-row">
+      <span class="pill blue">Git (Basic)</span>
+      <span class="pill amber">SQL (Basic)</span>
+      <span class="pill mint">REST APIs (Basic)</span>
+    </div>
+
+    <p><span class="kw"></span> <span class="str">Soft_skills</span> <span class="kw"></span> <span class="var"></span></p>
+    <div class="pill-row">
+      <span class="pill pink">Analytical Thinking</span>
+      <span class="pill blue">Communication</span>
+      <span class="pill amber">Time Management</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="section-head">
+    <span class="section-tag"></span>
+    <h2>Projects</h2>
+  </div>
+
+  <div class="project-grid">
+    <article class="project-card">
+      <div class="project-fn"><span class="kw"></span> <span class="fn">Resume Shortlisting System</span><span class="op"></span> <span class="brace">{</span></div>
+      <p class="project-desc">Automated resume screening that matches resumes with job descriptions to rank and shortlist candidates.</p>
+      <div class="project-meta">
+        <span class="meta-label">tools</span>
+        <div class="pill-row small">
+          <span class="pill blue">Python</span><span class="pill amber">Flask</span><span class="pill mint">Scikit-learn</span><span class="pill pink">TF-IDF</span><span class="pill blue">SQLite</span>
+        </div>
+      </div>
+      <div class="project-meta">
+        <span class="meta-label">use case</span>
+        <p class="project-use">HR recruitment &amp; candidate ranking</p>
+      </div>
+      <div class="project-fn close"><br><span class="brace">}</span></div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-fn"><span class="kw"></span> <span class="fn">Movie Recommendation System</span><span class="op"></span> <span class="brace">{</span></div>
+      <p class="project-desc">Recommends personalized movies to users based on preferences using collaborative filtering.</p>
+      <div class="project-meta">
+        <span class="meta-label">tools</span>
+        <div class="pill-row small">
+          <span class="pill blue">Python</span><span class="pill amber">Pandas</span><span class="pill mint">NumPy</span><span class="pill pink">Scikit-learn</span>
+        </div>
+      </div>
+      <div class="project-meta">
+        <span class="meta-label">use case</span>
+        <p class="project-use">OTT platforms &amp; personalized content</p>
+      </div>
+      <div class="project-fn close"><br><span class="brace">}</span></div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-fn"><span class="kw"></span> <span class="fn">Smart Attendance System</span><span class="op"></span> <span class="brace">{</span></div>
+      <p class="project-desc">Automates attendance using face recognition to prevent proxy attendance.</p>
+      <div class="project-meta">
+        <span class="meta-label">tools</span>
+        <div class="pill-row small">
+          <span class="pill blue">Python</span><span class="pill amber">OpenCV</span><span class="pill mint">Face Recognition</span><span class="pill pink">NumPy</span><span class="pill blue">SQLite</span>
+        </div>
+      </div>
+      <div class="project-meta">
+        <span class="meta-label">use case</span>
+        <p class="project-use">Schools, colleges &amp; offices</p>
+      </div>
+      <div class="project-fn close"><br><span class="brace">}</span></div>
+    </article>
+  </div>
+</section>
+
+<!-- EXPERIENCE / LOG -->
+<section class="section" id="experience">
+  <div class="section-head">
+    <span class="section-tag"></span>
+    <h2>Experience</h2>
+  </div>
+
+  <div class="log-block">
+    <div class="log-line">
+      <span class="log-time">Training & Internship</span>
+      <div>
+        <p class="log-title">AI/ML Trainee — Acmegrade <span class="tag-pill light">3 months</span></p>
+        <p class="log-desc">Built and evaluated machine learning models on real-world datasets. Performed data preprocessing, feature engineering, model training, and performance evaluation.</p>
+        <div class="pill-row small">
+          <span class="pill blue">Python</span><span class="pill amber">Jupyter Notebook</span><span class="pill mint">Pandas</span><span class="pill pink">NumPy</span><span class="pill blue">Scikit-learn</span><span class="pill amber">Matplotlib</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="log-line">
+      <span class="log-time">[certificate]</span>
+      <div>
+        <p class="log-title">AI/ML Training &amp; Internship Certificate</p>
+        <p class="log-desc">Acmegrade</p>
+      </div>
+    </div>
+
+    <div class="log-line">
+      <span class="log-time">Certificate</span>
+      <div>
+        <p class="log-title">C &amp; C++ Training Certificate</p>
+        <p class="log-desc">IIT Kanpur</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-head">
+    <span class="section-tag"></span>
+    <h2>Contact</h2>
+  </div>
+
+  <div class="contact-wrap">
+    <div class="terminal">
+      <p class="term-line">Name<span class="prompt"></span></p>
+      <p class="term-out">shubham-singh</p>
+      <p class="term-line"><span class="prompt">Contact</span></p>
+      <p class="term-out">email: <a href="mailto:thakurshubhamsingh0007@gmail.com">thakurshubhamsingh0007@gmail.com</a></p>
+      <p class="term-out">phone: <a href="tel:+917052566713">+91-7052566713</a></p>
+      <p class="term-out">linkedin: <a href="https://www.linkedin.com/in/shubham-singh-789880294/" id="linkedinLink">Linkedin/ShubhamSingh</a></p>
+      <p class="term-out">location: Greater Noida, Uttar Pradesh, India</p>
+      <p class="term-line"><span class="prompt"></span> <span class="term-cursor">_</span></p>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <label for="name">name</label>
+      <input type="text" id="name" name="name" placeholder="your name" required>
+      <label for="email">email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      <label for="message">message</label>
+      <textarea id="message" name="message" rows="5" placeholder="say hello..." required></textarea>
+      <button type="submit" class="btn btn-primary full">Send message →</button>
+      <p class="form-status" id="formStatus" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Shubham Singh ·  HTML, CSS &amp; JS</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
