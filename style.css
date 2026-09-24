@@ -184,6 +184,17 @@ ul{ list-style: none; margin:0; padding:0; }
 }
 
 /* ---- ABOUT ---- */
+.comment-block p{
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--text-dim);
+  margin: 0;
+}
+
+.comment-block .highlight{
+  color: var(--mint-solid);
+  font-weight: 500;
+}
 .about-grid{ display:grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items:start; }
 .comment-block p{ margin:0 0 2px; }
 .education-card{

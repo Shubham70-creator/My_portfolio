@@ -24,7 +24,7 @@ tabs.querySelectorAll('.tab').forEach(link => {
 });
 
 // ============ TYPING EFFECT (hero role) ============
-const roles = ["\"AI/ML Enthusiast\"", "\"Java Developer\"", "\"Problem Solver\"", "\"CS Undergrad\""];
+const roles = ["\"AI/ML Enthusiast\"", "\"Developer\"", "\"Problem Solver\"", "\"CS Undergraduate\""];
 const typingEl = document.getElementById('typingRole');
 let roleIndex = 0, charIndex = 0, deleting = false;
 
