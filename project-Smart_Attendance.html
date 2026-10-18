@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Attendance System Using Face Recognition | Shubham Singh</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ee4b57'/%3E%3Ctext x='32' y='45' font-family='Arial' font-size='38' font-weight='700' text-anchor='middle' fill='white'%3ES%3C/text%3E%3C/svg%3E">
+<script>
+  (function(){ try{ if(localStorage.getItem('theme')==='dark') document.documentElement.setAttribute('data-theme','dark'); }catch(e){} })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">Shubham<span>.</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <a href="index.html#projects" class="back">← Back to projects</a>
+    <h1>Smart Attendance System Using Face Recognition</h1>
+    <p class="lead">A Python desktop application that uses a webcam, computer vision and face recognition to take student attendance automatically.</p>
+    <div class="tag-row">
+      <span>Python</span><span>OpenCV</span><span>LBPH</span><span>Haar Cascade</span><span>Tkinter</span><span>NumPy</span><span>Pandas</span><span>CSV</span>
+    </div>
+  </div>
+</section>
+
+<section class="detail">
+  <div class="container">
+    <div class="narrow">
+
+      <div class="facts">
+        <div class="fact"><span>Type</span><strong>Personal Project</strong></div>
+        <div class="fact"><span>My Role</span><strong>Designed &amp; built it end to end</strong></div>
+        <div class="fact"><span>Domain</span><strong>Desktop App · Computer Vision</strong></div>
+      </div>
+
+      <h2>The Problem</h2>
+      <p>In a traditional classroom, the teacher marks attendance by hand. This takes time during the lecture and it also allows proxy attendance, where one student marks attendance for another. I wanted to reduce this manual effort and make the process faster and more convenient.</p>
+
+      <h2>What I Built</h2>
+      <p>I built a Smart Attendance System that uses OpenCV and the Local Binary Patterns Histograms (LBPH) algorithm to recognise registered faces through a webcam. When a registered face is recognised, the system records the student's ID, name, date and time in an attendance CSV file. Everything is controlled from a graphical interface made with Tkinter.</p>
+
+      <h2>Features</h2>
+      <ul>
+        <li><strong>Student registration:</strong> register a student with a unique ID and name.</li>
+        <li><strong>Face image capture:</strong> capture the student's face images from the webcam.</li>
+        <li><strong>Face detection:</strong> find faces in each camera frame using the Haar Cascade classifier.</li>
+        <li><strong>Model training:</strong> train the LBPH recogniser on the captured images.</li>
+        <li><strong>Face recognition:</strong> identify registered students in the live camera feed.</li>
+        <li><strong>Automated attendance:</strong> record ID, name, date and time for every recognised student.</li>
+        <li><strong>CSV storage:</strong> keep student details and attendance records in CSV files that open easily in Excel or Google Sheets.</li>
+        <li><strong>Local processing:</strong> all webcam images are processed on the computer itself, with no cloud service.</li>
+      </ul>
+
+      <h2>Tech Stack</h2>
+      <ul>
+        <li><strong>Python:</strong> main programming language</li>
+        <li><strong>OpenCV:</strong> face detection, image processing and recognition</li>
+        <li><strong>LBPH:</strong> face recognition algorithm</li>
+        <li><strong>Haar Cascade:</strong> face detection</li>
+        <li><strong>Tkinter:</strong> graphical user interface</li>
+        <li><strong>NumPy:</strong> image array processing</li>
+        <li><strong>Pandas:</strong> handling tabular data</li>
+        <li><strong>CSV files:</strong> student and attendance record storage</li>
+      </ul>
+
+      <h2>How It Works</h2>
+      <ol>
+        <li><strong>Register:</strong> the user enters a student ID and name and clicks Take Images.</li>
+        <li><strong>Capture:</strong> the webcam captures the student's face images and saves them in the training folder.</li>
+        <li><strong>Train:</strong> the application processes the saved images and trains the LBPH model. The trained model is saved as <code>Trainner.yml</code>.</li>
+        <li><strong>Detect:</strong> when attendance starts, the webcam opens and the Haar Cascade finds the faces in every frame.</li>
+        <li><strong>Recognise:</strong> each detected face is compared with the trained model to find out which registered student it is.</li>
+        <li><strong>Record:</strong> the student's ID, name, date and time are saved in the attendance CSV file.</li>
+      </ol>
+
+      <h2>Why LBPH and Haar Cascade</h2>
+      <p>LBPH describes the local texture patterns of a face as numerical histograms and compares them with the trained data. I used it because it works on grayscale images, it is light enough for a small application, it is available in OpenCV, and it runs locally without any cloud service.</p>
+      <p>The Haar Cascade only detects where a face is in the frame. The recognition model then decides whose face it is. These are two different steps: detecting a face does not identify a person.</p>
+
+      <h2>My Role</h2>
+      <p>This was a personal project, so I did all of it myself: planning the workflow, writing the registration and image capture, building the Tkinter interface, training the LBPH model, writing the real-time recognition and attendance recording, and testing and debugging the whole application.</p>
+
+      <h2>What I Learned</h2>
+      <ul>
+        <li>How face detection and face recognition work, and how they are different from each other.</li>
+        <li>How to preprocess images, for example converting them to grayscale, and how to train an LBPH face recognizer with OpenCV.</li>
+        <li>How to build a desktop application with a Tkinter interface.</li>
+        <li>How to store and handle structured data with CSV files, Pandas and NumPy.</li>
+        <li>How to join several parts (GUI, camera, training and storage) into a single working application.</li>
+        <li>How to debug real problems like wrong file paths, library conflicts and runtime errors.</li>
+      </ul>
+
+      <h2>Challenges</h2>
+      <!-- EDIT: keep only the ones you really faced -->
+      <ul>
+        <li>The <code>cv2.face</code> error: the LBPH recogniser needs the <code>opencv-contrib-python</code> package, and conflicting OpenCV installations can break it.</li>
+        <li>Getting training to work: the images, file paths and file names had to match exactly what the training code expected.</li>
+        <li>Making sure that the camera opens properly and that recognised students are recorded correctly.</li>
+      </ul>
+
+      <h2>Limitations and Future Improvements</h2>
+      <ul>
+        <li>The system does not have liveness detection yet, so in theory a photograph or video could be used to fool it. Adding it is my main next step.</li>
+        <li>Attendance is stored in CSV files. A database like SQLite or MySQL would be better for larger use.</li>
+        <li>Recognition can be improved in different lighting conditions.</li>
+        <li>Duplicate attendance should be prevented across multiple sessions.</li>
+        <li>Planned additions: attendance reports with date filters, Excel and PDF export, admin login and a more modern interface.</li>
+      </ul>
+
+      <h2>Privacy</h2>
+      <p>Face images are sensitive personal data. This project is meant for learning purposes, and anyone using a system like this should get proper consent, restrict access to the images and attendance records, and follow data-protection rules.</p>
+
+      <div class="detail-buttons">
+        <!-- EDIT: replace with your repository link, for example https://github.com/Shubham70-creator/YOUR-REPO-NAME -->
+        <a href="https://github.com/Shubham70-creator" target="_blank" rel="noopener" class="btn btn-red">View on GitHub</a>
+        <a href="index.html#projects" class="btn btn-outline">← Back to Projects</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Shubham Singh. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

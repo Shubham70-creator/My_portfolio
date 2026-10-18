@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veritas — Deepfake Detection Platform | Shubham Singh</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ee4b57'/%3E%3Ctext x='32' y='45' font-family='Arial' font-size='38' font-weight='700' text-anchor='middle' fill='white'%3ES%3C/text%3E%3C/svg%3E">
+<script>
+  (function(){ try{ if(localStorage.getItem('theme')==='dark') document.documentElement.setAttribute('data-theme','dark'); }catch(e){} })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">Shubham<span>.</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <a href="index.html#projects" class="back">← Back to projects</a>
+    <h1>Veritas — Deepfake Detection Platform</h1>
+    <p class="lead">A full-stack platform that analyzes images, videos, audio and live webcam sessions for signals of manipulated or synthetic media, built by a team of five.</p>
+    <div class="tag-row">
+      <span>React</span><span>Vite</span><span>Tailwind CSS</span><span>FastAPI</span><span>PyTorch</span><span>MobileNetV2</span><span>PostgreSQL</span><span>OpenCV</span><span>MediaPipe</span>
+    </div>
+  </div>
+</section>
+
+<section class="detail">
+  <div class="container">
+    <div class="narrow">
+
+      <div class="facts">
+        <div class="fact"><span>Type</span><strong>Team Project · 5 members</strong></div>
+        <div class="fact"><span>My Role</span><strong>Model training &amp; frontend</strong></div>
+        <div class="fact"><span>Status</span><strong>Deployment-ready build</strong></div>
+      </div>
+
+      <h2>Overview</h2>
+      <p>Veritas is a full-stack platform for checking whether an image, video, audio clip or live webcam session shows signs of being manipulated or synthetic. Instead of a simple yes or no, every result comes with one of five confidence bands: <strong>REAL, Possibly Real, Uncertain, Possibly Fake</strong> and <strong>FAKE</strong>. The project was built by a team of five, and it is packaged as a deployment-ready application.</p>
+
+      <h2>What the Platform Does</h2>
+      <ul>
+        <li><strong>Image, video and audio analysis:</strong> users upload a file and get a prediction, with file type and size validation.</li>
+        <li><strong>Live webcam detection:</strong> frames are analysed in real time over a WebSocket connection.</li>
+        <li><strong>User accounts:</strong> email/password signup and login, plus Google Sign-In, using JWT authentication.</li>
+        <li><strong>Prediction history:</strong> every user can see their own past results, and their files stay private to them.</li>
+        <li><strong>Usage plans:</strong> five free checks by default, with weekly, monthly and annual plans through Razorpay.</li>
+        <li><strong>Admin dashboard:</strong> metrics and a user overview for the admin.</li>
+        <li><strong>Deployment support:</strong> health and readiness endpoints, environment-based configuration and a Render Blueprint for the backend and frontend.</li>
+      </ul>
+
+      <h2>Tech Stack</h2>
+      <ul>
+        <li><strong>Frontend:</strong> React, Vite, Tailwind CSS</li>
+        <li><strong>Backend:</strong> FastAPI, WebSocket</li>
+        <li><strong>Database:</strong> PostgreSQL with SQLAlchemy</li>
+        <li><strong>Image / video model:</strong> PyTorch, MobileNetV2</li>
+        <li><strong>Audio model:</strong> MobileNetV2 trained on mel-spectrogram images</li>
+        <li><strong>Face processing:</strong> MediaPipe, with an OpenCV Haar cascade fallback</li>
+        <li><strong>Extra video signals:</strong> rPPG and lip-sync correlation</li>
+        <li><strong>Auth and payments:</strong> JWT, bcrypt, Google Sign-In, Razorpay</li>
+      </ul>
+
+      <h2>How the Detection Works</h2>
+      <ol>
+        <li>The user uploads a file or starts a live webcam session from the React interface.</li>
+        <li>Faces are found and cropped using MediaPipe, with OpenCV as a fallback if MediaPipe fails.</li>
+        <li>The trained MobileNetV2 model predicts how likely the media is to be fake. For audio, the sound is first converted into a mel-spectrogram image and then classified the same way.</li>
+        <li>For video, two supporting signals are added: rPPG (a pulse-like signal from the face) and lip-sync correlation.</li>
+        <li>The signals are combined in a conservative ensemble, with weights of <strong>90% CNN, 5% rPPG and 5% lip-sync</strong>, and the result is mapped to one of the five confidence bands.</li>
+      </ol>
+
+      <h2>My Role</h2>
+      <p>We were five people on this project and the work was shared across the team. My main responsibilities were the <strong>model training</strong> and the <strong>frontend</strong>, and I also worked a little on almost every other part of the project.</p>
+
+      <p><strong>Model training</strong></p>
+      <ul>
+        <li>Worked on the training pipeline: downloading the datasets, building the data manifests and training the detector.</li>
+        <li>Trained the MobileNetV2-based image and video detector in PyTorch.</li>
+        <li>Worked on the audio detection model, which uses mel-spectrogram images.</li>
+        <li>Evaluated the model and kept the validation results as experiment results instead of claiming real-world accuracy.</li>
+      </ul>
+
+      <p><strong>Frontend</strong></p>
+      <!-- EDIT: keep only the pages/features you really built -->
+      <ul>
+        <li>Built the React + Vite + Tailwind CSS interface.</li>
+        <li>Created the pages for login and signup, the dashboard, upload and results, prediction history, live webcam detection and the upgrade page.</li>
+        <li>Connected the frontend with the FastAPI backend and the WebSocket live detection.</li>
+      </ul>
+
+      <p><strong>Other areas</strong></p>
+      <ul>
+        <li>Helped in integrating the model with the backend and in testing the full flow across the project.</li>
+      </ul>
+
+      <h2>What I Learned</h2>
+      <!-- EDIT: change these so they match what you really learned -->
+      <ul>
+        <li>How a full machine learning training pipeline works, from collecting data and making manifests to training and evaluating a model.</li>
+        <li>How transfer learning with MobileNetV2 helps, and how to turn audio into mel-spectrograms so that an image model can classify it.</li>
+        <li>How to build a real product interface in React and connect it with a Python backend, including real-time WebSocket communication.</li>
+        <li>How to work in a team of five: dividing the work, using Git and GitHub together, and joining the model, backend and frontend into one application.</li>
+        <li>Why a detector should not claim 100% certainty, and why showing confidence bands is more honest than a plain real or fake label.</li>
+      </ul>
+
+      <h2>Challenges</h2>
+      <!-- EDIT: replace with your real challenges -->
+      <ul>
+        <li>Keeping live webcam detection smooth while the model runs on incoming frames.</li>
+        <li>Making the model work reasonably across different faces, lighting and media quality.</li>
+        <li>Joining the work of five people into one application with a common structure for the model, backend and frontend.</li>
+      </ul>
+
+      <h2>Limitations and Honest Notes</h2>
+      <ul>
+        <li>The platform deliberately does not claim 100% certainty, which is why it uses five confidence bands.</li>
+        <li>The trained image and video detector is MobileNetV2-based. rPPG and lip-sync are supporting signals, not independently validated deep-learning detectors.</li>
+        <li>The validation results are experiment results from the project and should not be taken as a universal real-world accuracy guarantee.</li>
+        <li>For a real production rollout, uploaded files should be stored in durable private object storage instead of a temporary web-service filesystem.</li>
+      </ul>
+
+      <div class="detail-buttons">
+        <a href="https://github.com/Shubham70-creator/Veritas-Deepfake-Detection" target="_blank" rel="noopener" class="btn btn-red">View on GitHub</a>
+        <a href="index.html#projects" class="btn btn-outline">← Back to Projects</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Shubham Singh. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
